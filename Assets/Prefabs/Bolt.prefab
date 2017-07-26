@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   Root: {fileID: 4457103673114866}
-  Speed: 2
+  Speed: 1
   Direction: {x: 0, y: -1}
   ArrivedOffset: 0.05
 --- !u!212 &212602889647605442
