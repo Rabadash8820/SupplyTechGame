@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace SupplyTechGame {
+
+    public enum ItemType {
+        Nut,
+        Bolt,
+        Washer,
+    }
 
     [RequireComponent(typeof(Collider2D))]
     public class ConveyorItem : MonoBehaviour {
@@ -11,6 +16,7 @@ namespace SupplyTechGame {
         private Vector2 _nextDir = Vector2.zero;
 
         // INSPECTOR FIELDS
+        public ItemType Type;
         [Tooltip("This is the Transform that will be moved along the conveyor.")]
         public Transform Root;
         public float Speed = 1f;
@@ -40,7 +46,6 @@ namespace SupplyTechGame {
             Direction = _nextDir;
             _target = null;
         }
-
 
     }
 
