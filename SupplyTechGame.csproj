@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConveyorBelt.cs" />
+    <Compile Include="ItemBin.cs" />
     <Compile Include="ConveyorItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
