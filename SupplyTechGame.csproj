@@ -52,13 +52,20 @@
       <Project>{b4a989c3-c0eb-4145-a1f9-293ebc23fbce}</Project>
       <Name>Danware.Unity.Input</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Danware\Libraries\Danware.Unity\Danware.Unity\Danware.Unity.csproj">
+      <Project>{567fe3bc-52ee-4bf6-92be-a356f8f08dbe}</Project>
+      <Name>Danware.Unity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
-        XCOPY /Y $(TargetPath) $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
-        XCOPY /Y $(TargetDir)$(ProjectName).pdb $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
-        XCOPY /Y $(TargetDir)Danware.Unity.Input.dll $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
-        XCOPY /Y $(TargetDir)Danware.Unity.Input.pdb $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\</PostBuildEvent>
+      XCOPY /Y $(TargetPath) $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+      XCOPY /Y $(TargetDir)$(ProjectName).pdb $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+      XCOPY /Y $(TargetDir)Danware.Unity.dll $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+      XCOPY /Y $(TargetDir)Danware.Unity.pdb $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+      XCOPY /Y $(TargetDir)Danware.Unity.Input.dll $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+      XCOPY /Y $(TargetDir)Danware.Unity.Input.pdb $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

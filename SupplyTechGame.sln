@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyTechGame", "SupplyTechGame.csproj", "{CBF665A0-5539-4214-AAAA-3E4800E583AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Danware.Unity.Input", "..\..\..\..\Danware\Libraries\Danware.Unity\Danware.Unity.Input\Danware.Unity.Input.csproj", "{B4A989C3-C0EB-4145-A1F9-293EBC23FBCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Danware.Unity.Input", "..\..\..\Danware\Libraries\Danware.Unity\Danware.Unity.Input\Danware.Unity.Input.csproj", "{B4A989C3-C0EB-4145-A1F9-293EBC23FBCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Danware.Unity", "..\..\..\Danware\Libraries\Danware.Unity\Danware.Unity\Danware.Unity.csproj", "{567FE3BC-52EE-4BF6-92BE-A356F8F08DBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{B4A989C3-C0EB-4145-A1F9-293EBC23FBCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4A989C3-C0EB-4145-A1F9-293EBC23FBCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4A989C3-C0EB-4145-A1F9-293EBC23FBCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{567FE3BC-52EE-4BF6-92BE-A356F8F08DBE}.Debug|Any CPU.ActiveCfg = Debug2D|Any CPU
+		{567FE3BC-52EE-4BF6-92BE-A356F8F08DBE}.Debug|Any CPU.Build.0 = Debug2D|Any CPU
+		{567FE3BC-52EE-4BF6-92BE-A356F8F08DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{567FE3BC-52EE-4BF6-92BE-A356F8F08DBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5167CDA-AC79-4B46-99FF-F2ED999A329F}
 	EndGlobalSection
 EndGlobal
