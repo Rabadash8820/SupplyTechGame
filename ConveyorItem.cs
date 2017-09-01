@@ -37,7 +37,6 @@ namespace SupplyTechGame {
             if (cb != null) {
                 _target = cb.transform.position;
                 _nextDir = cb.Direction;
-                Debug.Log("collided!");
             }
         }
 
