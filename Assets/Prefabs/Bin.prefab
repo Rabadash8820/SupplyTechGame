@@ -166,6 +166,12 @@ MonoBehaviour:
   m_Script: {fileID: -1073254537, guid: 57776a7821062a64194b8ecaf7691487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
+  ItemCollected:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!212 &212263291389367736
 SpriteRenderer:
   m_ObjectHideFlags: 1
