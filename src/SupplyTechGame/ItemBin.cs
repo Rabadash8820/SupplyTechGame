@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics.CodeAnalysis;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace SupplyTechGame {
@@ -10,6 +11,8 @@ namespace SupplyTechGame {
         public ItemType Type;
         public UnityEvent ItemCollected = new UnityEvent();
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
+        [SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "Unity message")]
         private void OnTriggerEnter2D(Collider2D other) {
             ConveyorItem item = other.GetComponent<ConveyorItem>();
             if (item != null) {

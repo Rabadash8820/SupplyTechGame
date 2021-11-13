@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -42,16 +43,24 @@ namespace SupplyTechGame {
         public bool CanBe270 = true;
 
         // EVENT HANDLERS
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
+        [SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "Unity message")]
         private void Awake() {
             // Assert that at least ONE rotation is allowed
             bool someRotAllowed = CanBe0 || CanBe90 || CanBe180 || CanBe270;
             Assert.IsTrue(someRotAllowed, $"A {nameof(ConveyorBelt)} must have at least one allowed rotation!");
         }
+
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
+        [SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "Unity message")]
         private void Start() {
             _angle = ((int)TransformToRotate.localRotation.eulerAngles.z + 360) % 360;
             Debug.Log($"{TransformToRotate.name} has initial angle of {_angle}°");
             _direction = getDirectionFrom(_angle);
         }
+
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
+        [SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "Unity message")]
         private void OnDrawGizmos() {
             float offset = 0.1f;
             float len = 0.65f;

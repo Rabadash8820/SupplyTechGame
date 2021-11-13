@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <UnityVersion>2021.1.5f1</UnityVersion>
+    <Copyright>Copyright © 2017</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Unity3D" Version="1.7.0" />
+  </ItemGroup>
+
+  <Target Name="CopyBuidOutputsToUnity" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetDir)\$(SolutionName).dll" DestinationFolder="$(SolutionDir)\..\$(SolutionName)\Assets\$(SolutionName)\logic" />
+    <Copy SourceFiles="$(TargetDir)\$(SolutionName).pdb" DestinationFolder="$(SolutionDir)\..\$(SolutionName)\Assets\$(SolutionName)\logic" />
+  </Target>
+
+</Project>
