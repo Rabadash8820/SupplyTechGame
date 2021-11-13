@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBF665A0-5539-4214-AAAA-3E4800E583AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SupplyTechGame</RootNamespace>
+    <AssemblyName>SupplyTechGame</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNITY_ASSERTIONS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConveyorBelt.cs" />
+    <Compile Include="ItemBin.cs" />
+    <Compile Include="ConveyorItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Danware\Libraries\Danware.Unity\Danware.Unity.Input\Danware.Unity.Input.csproj">
+      <Project>{b4a989c3-c0eb-4145-a1f9-293ebc23fbce}</Project>
+      <Name>Danware.Unity.Input</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Danware\Libraries\Danware.Unity\Danware.Unity\Danware.Unity.csproj">
+      <Project>{567fe3bc-52ee-4bf6-92be-a356f8f08dbe}</Project>
+      <Name>Danware.Unity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+      XCOPY /Y $(TargetPath) $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+      XCOPY /Y $(TargetDir)$(ProjectName).pdb $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+      XCOPY /Y $(TargetDir)Danware.Unity.dll $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+      XCOPY /Y $(TargetDir)Danware.Unity.pdb $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+      XCOPY /Y $(TargetDir)Danware.Unity.Input.dll $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+      XCOPY /Y $(TargetDir)Danware.Unity.Input.pdb $(ProjectDir)..\$(ProjectName)_Unity\Assets\Plugins\
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
